@@ -18,4 +18,14 @@ a {
 .page-title,
 .page-subtitle {
     text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-primary);
+    max-width: 192px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
