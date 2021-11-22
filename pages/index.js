@@ -9,7 +9,7 @@ export default function Home() {
         <meta name="description" content="Lazar Djordjevic lazardjordjevic blog nextjs" />
       </Head>
       <h1 className="page-title">Lazar Djordjevic</h1>
-      <h2 className="page-subtitle">NextJS blog</h2>
+      <h2 className="page-subtitle">NextJS blog NextJS blogNextJS blog NextJS blogNextJS blog NextJS blogNextJS blog NextJS blogNextJS blog NextJS blogNextJS blog NextJS blogNextJS blog NextJS blogNextJS blog NextJS blogNextJS blog NextJS blogNextJS blog NextJS blogNextJS blog NextJS blogNextJS blog NextJS blog</h2>
     </>
   )
 }
