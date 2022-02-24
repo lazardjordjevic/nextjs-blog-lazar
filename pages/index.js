@@ -3,9 +3,17 @@ import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
 
+import { applyPolyfills, defineCustomElements } from 'lazer-component/loader';
+
 const Home = ({ posts }) => {
+    applyPolyfills().then(() => {
+        defineCustomElements();
+      });
+
     return (
         <div className='mt-5'>
+            <div>asd</div>
+            <my-component></my-component>
             {posts.map((post, index) => (
                 <Link href={'/' + post.slug} passHref key={index}>
                     <div>
