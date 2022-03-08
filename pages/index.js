@@ -5,42 +5,47 @@ import Link from 'next/link'
 
 import { applyPolyfills, defineCustomElements } from 'lazer-component/loader'
 import { useEffect } from 'react'
+import { useRouter } from 'next/dist/client/router'
 
 const Home = ({ posts }) => {
+    const router = useRouter()
+    let test = null
+
+    const handleKeypress = e => {
+        if (test !== null) {
+            if (e.code === 'ArrowLeft' && test >= 0) {
+                test = test > 0 ? test - 1 : 0
+            } else if (e.code === 'ArrowRight' && test < posts.length - 1) {
+                test += 1
+            }
+        } else {
+            test = 0
+        }
+
+        // test = e.code === 'ArrowLeft' && test >= 0 ? test > 0 ? test - 1 : 0 : e.code === 'ArrowRight' && test < posts.length - 1 ? test += 1 : 0
+
+        router.push(`/${test}`)
+    }
+
     useEffect(() => {
         applyPolyfills().then(() => {
             defineCustomElements()
         })
+        window.addEventListener('keydown', handleKeypress)
     })
 
     return (
         <div className='mt-5'>
-            <div>asd</div>
-            <lazer-button button-text='Inner button text'></lazer-button>
-            <lazer-rainbow-card
-                card-title="Arya's cat"
-                card-image='https://image.shutterstock.com/image-photo/portrait-surprised-cat-scottish-straight-260nw-499196506.jpg'
-                strength-stats='52'
-                agility-stats='43'
-                inteligence-stats='32'
-            ></lazer-rainbow-card>
-            <my-component></my-component>
             {posts.map((post, index) => (
                 <Link href={'/' + post.slug} passHref key={index}>
-                    <div>
-                        <div className='row g-0'>
-                            <h5 className='card-title'>
-                                {post.frontMatter.title}
-                            </h5>
-                            <p className='card-text'>
-                                {post.frontMatter.description}
-                            </p>
-                            <p className='card-text'>
-                                <small className='text-muted'>
-                                    {post.frontMatter.date}
-                                </small>
-                            </p>
-                        </div>
+                    <div className='post-card'>
+                        <h5 className='post-card__title'>
+                            {post.frontMatter.title}
+                        </h5>
+                        <span className='post-card__description'>
+                            {post.frontMatter.description}
+                        </span>
+                        <span className='post-card__date'>{post.frontMatter.date}</span>
                     </div>
                 </Link>
             ))}
