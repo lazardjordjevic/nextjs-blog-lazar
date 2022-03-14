@@ -1,7 +1,10 @@
-import '../styles/globals.scss'
+import "../styles/globals.scss";
+import { useKeyboardNavigation } from "../hooks/useKeyboardNavigation";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  useKeyboardNavigation();
+
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
