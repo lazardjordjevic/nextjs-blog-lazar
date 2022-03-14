@@ -2,17 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
-import { applyPolyfills, defineCustomElements } from "lazer-component/loader";
-import { useEffect } from "react";
 import Head from "next/head";
 
 const Home = ({ posts }) => {
-  useEffect(() => {
-    applyPolyfills().then(() => {
-      defineCustomElements();
-    });
-  }, []);
-
   return (
     <div>
       <Head>

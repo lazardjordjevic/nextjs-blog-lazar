@@ -3,17 +3,9 @@ import { MDXRemote } from "next-mdx-remote";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { applyPolyfills, defineCustomElements } from "lazer-component/loader";
-import { useEffect } from "react";
 import Head from "next/head";
 
 const PostPage = ({ frontMatter: { title }, mdxSource }) => {
-  useEffect(() => {
-    applyPolyfills().then(() => {
-      defineCustomElements();
-    });
-  }, []);
-
   return (
     <div>
       <Head>
