@@ -5,6 +5,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { applyPolyfills, defineCustomElements } from 'lazer-component/loader'
 import { useEffect } from 'react'
+import Head from 'next/head'
 
 const PostPage = ({ frontMatter: { title, date }, mdxSource }) => {
     useEffect(() => {
@@ -15,6 +16,15 @@ const PostPage = ({ frontMatter: { title, date }, mdxSource }) => {
 
     return (
         <div>
+            <Head>
+                <link
+                    id='favicon'
+                    rel='shortcut icon'
+                    type='image/png'
+                    href='https://res.cloudinary.com/elazar93/image/upload/v1647269195/vega_logo_dage4b.png'
+                />
+                <title>Web Components </title>
+            </Head>
             <h1>{title}</h1>
             <MDXRemote {...mdxSource} />
         </div>

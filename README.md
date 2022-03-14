@@ -1,9 +1,1 @@
-- update home stranicu
-- update style da sve bude lepo centrirano
-- dodaj img component
-- dodaj jos 1 component
-- izbrisi console.log
-- napravi git za native JS projekat
-- dodaj poslednju stranicu sa korisnim linkovima
-- dodaj left/right arrow funkcionalnost za site navigaciju
-- link za prvu stranicu: https://nextjs-blog-lazar.vercel.app/0
+Building micro front-end architecture with Web Components lecture by Lazer
