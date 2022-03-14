@@ -30,17 +30,9 @@ a {
     -webkit-box-orient: vertical;
 }
 
-code {
-    color: blue;
-}
-
-.test123 {
-    color: red;
-}
-
 body {
     background-color: hsla(251, 52%, 13%, 1);
-    color: #efefef;
+    // color: #efefef;
     font-size: 22px;
     padding: 60px;
     position: relative;
@@ -51,20 +43,31 @@ h1 {
     text-align: center;
     margin-bottom: 90px;
     background-color: hsla(251, 52%, 13%, 1);
+    // color: #efefef;
+    color: #f05a28; // vega color
+}
+
+h2 {
     color: #efefef;
 }
 
 p {
-    text-align: center;
-}
-
-ul {
-    text-align: center;
-    list-style: none;
+    text-align: left;
+    color: #efefef;
+    font-size: 26px;
 }
 
 li {
     margin-bottom: 15px;
+}
+
+ul {
+    color: #efefef;
+}
+
+.page0-title {
+    text-align: right;
+    color: #efefef;
 }
 
 .stencil-logo {
@@ -74,19 +77,23 @@ li {
     display: block;
 }
 
+.native-div, .custom-div {
+    color: #efefef;
+}
+
 .npm-link {
     text-decoration: underline;
     position: absolute;
     top: 0;
     font-size: 12px;
+    color: #efefef;
 }
 
 .button-image {
     display: block;
-    height: 700px;
+    height: 800px;
     margin: 0 auto;
     margin-bottom: 200px;
-
 }
 
 .button-wrapper {
@@ -107,12 +114,12 @@ li {
 
 .iframe-image {
     height: 400px;
-    margin-bottom: 300px;
+    margin-bottom: 500px;
     margin-top: 100px;
 }
 
 .script-image {
-    margin-bottom: 200px;
+    margin-bottom: 500px;
 }
 
 .packagejson-image {
@@ -124,19 +131,75 @@ li {
 }
 
 .native-div {
-    margin: 500px auto;
-    text-align: center;
+    margin: 300px auto;
+    text-align: left;
 }
 
 .custom-div {
-    margin: 500px auto;
-    text-align: center;
+    margin: 300px auto;
+    text-align: left;
 }
 
-.post-card {
+.custom-event-image {
+    height: 300px;
+    margin-bottom: 400px;
+}
 
+.native-event-image {
+    height: 300px;
 }
 
 .post-card__title {
     color: hsl(28, 96%, 38%, 1);
+}
+
+.lazer-card__wrapp:last-of-type {
+    margin-bottom: 300px;
+}
+
+.blinking-title {
+    animation: blinker 1.2s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.page8-ul {
+    margin-bottom: 500px;
+}
+
+.page8-subtitle {
+    color: #efefef;
+}
+
+.sb-link {
+    display: inline-block;
+}
+
+.sb-link:hover {
+    color: #f05a28;
+}
+
+.page8-microfe {
+    margin-top: 600px;
+    color: #efefef;
+}
+
+a {
+    color: #efefef;
+    display: block;
+}
+
+a:hover {
+    color: #f05a28;
+}
+
+.looney-image {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 100px;
 }
